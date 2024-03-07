@@ -1,0 +1,114 @@
+nav {
+	z-index: 100;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-block: 1.5rem;
+	background-color: $white9;
+	backdrop-filter: blur(1rem);
+	transition: all $transition2;
+}
+
+.srolled-navbar {
+	padding-block: 1rem;
+	//box-shadow: $shadow-nav;
+}
+
+.nav-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 1rem;
+
+	@media (min-width: 1200px) {
+		padding-inline: 60px;
+	}
+
+	@media (min-width: 1600px) {
+		padding-inline: 85px;
+	}
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.brand-logo {
+	cursor: pointer;
+	height: 40px;
+}
+
+
+
+.menu-btn {
+	color: $neutral-dark;
+	cursor: pointer;
+}
+
+.overlay {
+	visibility: hidden;
+	position: fixed;
+	inset: 0;
+	background-color: $black;
+	opacity: 0;
+	z-index: 90;
+	transition: all 0.5s;
+	transition-timing-function: $transition1;
+
+	&.active {
+		visibility: visible;
+		opacity: 0.75;
+	}
+}
+
+@mixin nav-link {
+	cursor: pointer;
+	text-decoration: none;
+	color: $neutral-dark;
+	font-weight: 700;
+	transition: color $transition2;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+.menu-link {
+	@include nav-link;
+	font-size: 1.125rem;	
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 300px;
+	padding-top: 200px;
+	padding-inline: 2rem;
+	margin-right: -350px;
+	background-color: $white;
+	box-shadow: $shadow-nav;
+	transition: margin 0.5s;
+	transition-timing-function: $transition1;
+	z-index: 99;
+
+	&.active {
+		margin-right: 0;
+	}
+
+	.mobile-menu-link {
+		@include nav-link;
+		margin-block: 0.5rem;
+		font-size: 2rem;
+		//overflow: hidden;
+		line-height: 1;
+	}
+}

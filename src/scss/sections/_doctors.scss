@@ -1,0 +1,101 @@
+.doctors-section {
+	padding-block: 100px;
+	margin-inline: 1rem;
+	border-radius: $radius8;
+
+	@media (min-width: 1200px) {
+		margin-inline: 60px;
+	}
+
+	@media (min-width: 1600px) {
+		margin-inline: 85px;
+	}
+}
+
+.process {
+	border-radius: $radius8;
+	margin-top: -50px;
+	margin-bottom: 50px;
+	z-index: 100;
+
+	@media screen and (min-width: 768px) {
+		margin-top: -243px;
+	}
+
+	@media screen and (min-width: 992px) {
+		margin-top: -192px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-top: -162px;
+	}
+}
+
+.process-number {
+	display: grid;
+	place-content: center;
+	width: 70px;
+	height: 70px;
+	border: 1px solid $white3;
+	border-radius: 100px;
+	box-shadow: $shadow1;
+
+	p {
+		font-size: 17px;
+	}
+}
+
+.process-content {
+	flex: 1;
+}
+
+.doc-list {
+	margin-top: 100px;
+}
+
+.doc-card {
+	border-radius: $radius8;
+}
+
+.doc-avatar {
+	height: 150px;
+	width: 150px;
+	border-radius: 300px;
+
+	img {
+		width: 150px;
+	}
+}
+
+.doc-desc {
+	color: $neutral;
+
+	.doc-link {
+		color: $neutral-dark;
+		transition: color $transition2;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+.doc-link {
+	color: $neutral;
+	transition: color $transition2;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+.doc-footer {
+	.badge {
+		font-size: 12px;
+	}
+
+	&-text {
+		color: $neutral-dark;
+		font-size: 1.125rem;
+	}
+}

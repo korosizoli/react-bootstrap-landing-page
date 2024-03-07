@@ -1,0 +1,20 @@
+footer {
+	.footer-bottom,
+	.wrapper {
+		padding-block: 35px;
+	}
+	.wrapper {
+		background-color: $neutral-dark;
+	}
+
+	.menu-link {
+		color: $white;
+	}
+}
+
+.footer-bottom {
+	color: $neutral;
+	a {
+		color: $neutral-dark;
+	}
+}
