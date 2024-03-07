@@ -1,0 +1,66 @@
+.hero {
+	position: relative;
+	padding-block: 100px;
+
+	img {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+	}
+}
+
+@mixin ring {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+.hero-banner {
+	img {
+		width: 100%;
+		height: 150%;
+		z-index: 10;
+	}
+
+	&::after {
+		@include ring;
+		width: 500px;
+		height: 500px;
+		border: 30px solid $white;
+		opacity: 0.5;
+	}
+
+	&::before {
+		@include ring;
+		width: 400px;
+		height: 400px;
+		background-color: $primary;
+		opacity: 0.15;
+	}
+}
+
+.info-bar {
+	flex-direction: column;
+	padding-block: 2rem;
+	padding-inline: 1rem;
+
+	.info-title {
+		margin-bottom: 1rem;
+		padding-right: 1.5rem;
+		margin-right: 1.5rem;
+		border-right: none;
+	}
+
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+		text-align: left;
+
+		.info-title {
+			margin-bottom: 0;
+			border-right: 1px solid $white3;
+		}
+	}
+}

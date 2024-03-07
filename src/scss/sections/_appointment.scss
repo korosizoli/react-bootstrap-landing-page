@@ -1,0 +1,33 @@
+@mixin cta-images {
+	height: 60px;
+	width: 60px;
+	border-radius: 100px;
+}
+
+.cta-icon {
+	@include cta-images;
+	display: grid;
+	place-content: center;
+	margin-right: -16px;
+	z-index: 1;
+}
+
+.cta-avatar {
+	@include cta-images;
+	z-index: 0;
+}
+
+.phone-number {
+	color: $neutral-dark;
+	transition: color $transition2;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+.privacy {
+	color: $neutral;
+	font-size: 14px;
+	max-width: 400px;
+}

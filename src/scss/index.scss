@@ -1,0 +1,92 @@
+$primary: rgb(24 188 199 / 1);
+$primary1: rgb(24 188 199 / 0.1);
+$primary2: rgb(24 188 199 / 0.25);
+$primary-light: rgb(24 188 199 / 0.1);
+$tertiary: rgb(255 234 35 / 1);
+
+$white: rgb(255 255 255 / 1);
+$white3: rgb(255 255 255 / 0.35);
+$white9: rgb(255 255 255 / 0.9);
+$black: rgb(0 0 0 / 1);
+$black10: rgb(0 0 0 / 0.1);
+
+$neutral: rgb(132 133 135 / 1);
+$neutral-dark: rgb(48 51 52 / 1);
+$neutral-dark1: rgb(48 51 52 / 0.15);
+$neutral-dark2: rgb(48 51 52 / 0.2);
+
+$radius6: 6px;
+$radius8: 0.5rem;
+$radius16: 1rem;
+
+$shadow-nav: 0 0 2rem rgb(0 0 0 / 0.075);
+$shadow-accordion: 0 0 1rem rgb(0 0 0 / 0.1);
+$shadow1: 0 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+
+$transition1: cubic-bezier(0.15, 0.85, 0.31, 1);
+$transition2: 0.3s ease;
+
+$enable-cssgrid: true;
+
+$accordion-border-radius: $radius8;
+$accordion-border-width: 0;
+$focus-ring-width: 0;
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "globalStyles";
+@import "sections/";
+
+section,
+.section {
+	padding-block: 100px;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 1;
+	font-weight: 800;
+	color: $neutral-dark;
+
+	@media screen and (min-width: 768px) {
+		font-size: 3.75rem;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 4.5rem;
+	}
+}
+
+h2 {
+	font-size: 2.625rem;
+	line-height: 1;
+	font-weight: 800;
+	color: $neutral-dark;
+
+	@media screen and (min-width: 768px) {
+		font-size: 3.125rem;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 3.5rem;
+	}
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 700;
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+h6 {
+	font-size: 1.125rem;
+}
+
+p,
+h6 {
+	margin: 0;
+}

@@ -1,0 +1,72 @@
+.service-card {
+	padding: 2rem;
+	background-color: $white;
+	border-radius: $radius8;
+	transition: $transition2;
+	color: inherit;
+
+	.service-card-icon {
+		background-color: $primary1;
+		transition: $transition2;
+	}
+
+	.link-btn,
+	h5 {
+		color: $neutral-dark;
+		transition: $transition2;
+	}
+
+	p {
+		color: $neutral;
+		transition: $transition2;
+	}
+
+	&:hover {
+		background-color: $primary;
+
+		.link-btn,
+		h5,
+		p {
+			color: $white;
+		}
+
+		.service-card-icon {
+			background-color: $white;
+		}
+	}
+}
+
+.service-card-icon {
+	display: grid;
+	place-content: center;
+	width: 110px;
+	height: 110px;
+	font-size: 3rem;
+	border-radius: 50%;
+	color: $primary;
+}
+
+.swiper-slide {
+	cursor: grab;
+
+	&:active {
+		cursor: grabbing;
+	}
+}
+
+.border-sm,
+.border-md {
+	border-right: 0;
+}
+
+.border-sm {
+	@media screen and (min-width: 576px){
+		border-right: 1px solid $neutral-dark2;
+	}
+}
+
+.border-md {
+	@media screen and (min-width: 992px){
+		border-right: 1px solid $neutral-dark2;
+	}
+}

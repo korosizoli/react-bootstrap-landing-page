@@ -1,0 +1,64 @@
+.vision-banner {
+	border-radius: 0.5rem;
+	overflow: hidden;
+	width: 100%;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+		max-height: 620px;
+	}
+}
+
+.vision-content {
+	@media screen and (min-width: 768px) {
+		margin-block-end: 100px;
+	}
+}
+
+.accordion-item {
+	box-shadow: $shadow-accordion;
+}
+
+.accordion-button {
+	position: relative;
+	padding-inline: 3.25rem 1rem;
+	padding-block: 1.5rem;
+	overflow: hidden;
+
+	&.collapsed {
+		.number {
+			transition: opacity $transition2;
+			color: $primary;
+			opacity: 0.2;
+		}
+	}
+
+	.number {
+		transition: opacity $transition2;
+		position: absolute;
+		top: 50%;
+		left: -15px;
+		transform: translateY(-50%);
+		font-size: 3rem;
+		font-weight: 800;
+		color: $primary;
+	}
+}
+
+.accordion-item,
+.accordion-button {
+	border-radius: $radius8;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+	background-color: $white;
+	color: $neutral-dark;
+	font-weight: 600;
+}
+
+.accordion-body {
+	color: $neutral;
+	padding-inline: 3.25rem 1rem;
+}

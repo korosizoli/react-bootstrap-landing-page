@@ -1,0 +1,71 @@
+.about {
+	@media screen and (min-width: 768px) {
+		gap: 2rem;
+	}
+}
+
+@mixin about-images {
+	max-height: 600px;
+	width: 100%;
+	object-fit: cover;
+	border: 8px solid white;
+	border-radius: $radius16;
+	overflow: hidden;
+
+	@media screen and (min-width: 576px) {
+		height: 400px;
+		width: 50%;
+	}
+
+	@media screen and (min-width: 992px) {
+		position: absolute;
+	}
+}
+
+.about-img1 {
+	@include about-images;
+	z-index: 0;
+
+	@media screen and (min-width: 992px) {
+		top: 0;
+		left: 0;
+		width: 70%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 60%;
+	}
+}
+
+.about-img2 {
+	@include about-images;
+	z-index: 1;
+
+	@media screen and (min-width: 992px) {
+		bottom: 0;
+		right: 0;
+		width: 60%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 50%;
+	}
+}
+
+
+.rates {
+	margin-right: 2rem;
+	padding-right: 2rem;
+	border-right: 0;
+
+	@media screen and (min-width: 768px) {
+		border-right: 2px solid $neutral-dark;
+	}
+}
+
+.stars {
+	background-color: $tertiary;
+	padding: 0.5rem 0.75rem;
+	border-radius: 10rem;
+	color: $neutral-dark;
+}
